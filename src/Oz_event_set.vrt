@@ -1,0 +1,8 @@
+<OGRVRTDataSource>
+    <OGRVRTLayer name="Oz_event_set">
+        <SrcDataSource>src_data/Oz_event_set.txt</SrcDataSource>
+        <GeometryType>wkbPoint25D</GeometryType>
+        <LayerSRS>WGS84</LayerSRS>
+        <GeometryField encoding="PointFromColumns" x="rupture_centroid_lon" y="rupture_centroid_lat" z="depth" reportSrcColumn="FALSE"/>
+    </OGRVRTLayer>
+</OGRVRTDataSource>

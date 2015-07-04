@@ -1,0 +1,8 @@
+<OGRVRTDataSource>
+    <OGRVRTLayer name="AUSTCAT.MW.V0.11_public">
+        <SrcDataSource>src_data/AUSTCAT.MW.V0.11_public.csv</SrcDataSource>
+        <GeometryType>wkbPoint25D</GeometryType>
+        <LayerSRS>WGS84</LayerSRS>
+        <GeometryField encoding="PointFromColumns" x="LON" y="LAT" z="DEP" reportSrcColumn="FALSE"/>
+    </OGRVRTLayer>
+</OGRVRTDataSource>
