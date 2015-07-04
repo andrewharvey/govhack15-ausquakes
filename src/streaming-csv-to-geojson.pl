@@ -6,12 +6,11 @@
 # http://creativecommons.org/publicdomain/zero/1.0/
 
 use strict;
-use Text::CSV;
-use JSON;
+use Text::CSV_XS;
 
 my $csvfile = $ARGV[0];
-my $csv = Text::CSV->new ( { binary => 1,  empty_is_undef => 1 } )
-                 or die "Cannot use CSV: ".Text::CSV->error_diag ();
+my $csv = Text::CSV_XS->new ( { binary => 1,  empty_is_undef => 1 } )
+                 or die "Cannot use CSV: ".Text::CSV_XS->error_diag ();
 
 open my $csvfh, "<", $csvfile or die "$csvfile: $!";
 
