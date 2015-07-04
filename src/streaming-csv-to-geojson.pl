@@ -28,7 +28,7 @@ while ( my $row_hash = $csv->getline_hr( $csvfh ) ) {
           "type": "Feature",
           "geometry": {
               "type": "Point",
-              "coordinates": ['. $y . ',' . $x . ']
+              "coordinates": ['. $x . ',' . $y . ']
           },
           "properties": {
               "depth": ' . $row_hash->{'depth'} . ',
