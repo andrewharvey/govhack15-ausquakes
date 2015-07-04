@@ -19,8 +19,8 @@ $csv->column_names($csv->getline($csvfh));
 
 #read through the input CSV file
 while ( my $row_hash = $csv->getline_hr( $csvfh ) ) {
-  my $x = $row_hash->{'rupture_centroid_x'};
-  my $y = $row_hash->{'rupture_centroid_y'};
+  my $x = $row_hash->{'rupture_centroid_lon'};
+  my $y = $row_hash->{'rupture_centroid_lat'};
 
   if (defined $x && defined $y) {
       print '
@@ -32,7 +32,9 @@ while ( my $row_hash = $csv->getline_hr( $csvfh ) ) {
           },
           "properties": {
               "depth": ' . $row_hash->{'depth'} . ',
-              "Mw": ' . $row_hash->{'Mw'} . '
+              "Mw": ' . $row_hash->{'Mw'} . ',
+              "length": ' . $row_hash->{'length'} . ',
+              "width": ' . $row_hash->{'width'} . '
           }
       }';
   }
